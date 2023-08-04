@@ -12,7 +12,7 @@ module.exports = {
       loader: 'html-loader',
       filename: 'index.html',
       template: './src/html/index.template.html',
-      title: 'To Do'
+      title: 'Weather'
     })
   ],
   module: {
