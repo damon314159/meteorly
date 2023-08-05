@@ -3,3 +3,5 @@ dist/
 .prettierrc.js
 .eslintrc.json
 .prettierignore
+.vscode/
+.gitignore
