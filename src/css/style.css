@@ -1,41 +1,176 @@
-body {
-  font-family: Arial, sans-serif;
+:root {
+  font-size: 16px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@media only screen and (min-width: 320px) {
+  /* Add styles for small devices here */
+}
+
+@media only screen and (min-width: 768px) {
+  /* Add styles for medium devices here */
+}
+
+@media only screen and (min-width: 1024px) {
+  /* Add styles for large devices here */
+}
+body,
+h1,
+h2,
+h3,
+p {
   margin: 0;
   padding: 0;
-  background-color: #f2f2f2;
 }
 
-.weather-container {
-  max-width: 600px;
-  margin: 20px auto;
+body {
+  background-color: #f5f5f5;
+}
+
+.container {
+  margin: 0 auto;
   background-color: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.weather-info {
+header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.3rem;
+  background-color: #dedede;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column-reverse;
   align-items: center;
 }
 
-.weather-icon {
-  font-size: 48px;
+.logo h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: 0.6rem;
 }
 
-.temperature {
-  font-size: 36px;
-  font-weight: bold;
-  margin: 10px 0;
+.search-bar {
+  display: flex;
+  align-items: center;
+  border: 0.1rem solid #ccc;
+  border-radius: 0.4rem;
+  padding: 0.3rem;
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 0.3rem;
+}
+
+.main {
+  text-align: center;
+}
+
+.icon {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.overview {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(4, max-content);
+  align-items: center;
+  justify-items: center;
+  padding: 1.3rem;
 }
 
 .location {
-  font-size: 24px;
+  grid-area: 1/1/2/3;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.6rem;
 }
 
-.description {
-  font-size: 18px;
+.overview .condition-icon {
+  grid-area: 2/1/5/2;
+  height: 5rem;
+  width: 5rem;
+}
+
+.temp {
+  font-weight: bold;
+  margin: 0.3rem 0;
+}
+
+.major-temp {
+  font-size: 2.3rem;
+}
+
+.minor-temp {
+  font-size: 1rem;
+}
+
+.rain-chance,
+.humidity {
+  font-size: 0.9rem;
+}
+
+.rain-chance-icon {
+  display: inline-block;
+  height: 0.9rem;
+  width: 0.9rem;
+}
+
+.hourly {
+  padding: 1.3rem;
+  background-color: #dedede;
+}
+
+.hourly .scroll-container {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding: 1.5rem 0;
+}
+
+.hour {
   text-align: center;
-  margin-top: 10px;
+  min-width: 5rem;
+}
+
+.daily {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.3rem;
+}
+
+.day {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1rem;
+}
+
+.day .date {
+  min-width: 3rem;
+  text-align: center;
+}
+
+.day .condition-icon {
+  flex: 0 0 auto;
+}
+
+.day .temp {
+  font-size: 0.9rem;
+  flex: 0 0 auto;
+}
+
+.day .humidity,
+.day .minor-temp {
+  display: none;
+  flex: 0 0 auto;
+  font-size: 0.8rem;
 }

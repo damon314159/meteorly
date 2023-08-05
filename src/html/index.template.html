@@ -1,27 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weather</title>
-</head>
-<body>
-  <div class="weather-container">
-    <h1>Today's Weather</h1>
-    <div class="weather-info">
-      <div class="weather-icon">
-        <!-- Weather icon here -->
-      </div>
-      <div class="temperature">
-        <!-- Temperature here -->
-      </div>
-      <div class="location">
-        <!-- Location here -->
-      </div>
-      <div class="description">
-        <!-- Weather description here -->
-      </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meteorly</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo">
+          <h2>Meteorly</h2>
+          <img class="icon logo-icon" />
+        </div>
+        <div class="search-bar">
+          <input type="search" id="search-input" placeholder="Enter city" />
+          <img class="icon search-icon" />
+        </div>
+      </header>
+
+      <main>
+        <div class="overview">
+          <h2 class="location">
+            <span>City, Country</span>
+          </h2>
+          <img class="icon condition-icon" />
+          <p class="temp major-temp"><span>--</span>℃</p>
+          <p class="temp minor-temp">
+            Hi: <span class="temp-hi">--</span>℃ &nbsp;&nbsp; Lo: <span class="temp-lo">--</span>℃
+          </p>
+          <div>
+            <p class="rain-chance">Chance of Rain: <span>--</span>%</p>
+            <p class="humidity">Humidity: <span>--</span>%</p>
+          </div>
+        </div>
+
+        <div class="hourly">
+          <div class="scroll-container">
+            <div class="hour hour-0">
+              <p class="time"><span>Now</span></p>
+              <img class="icon condition-icon" />
+              <p class="temp minor-temp"><span>--</span>℃</p>
+              <p class="rain-chance"><img class="icon rain-chance-icon" /> <span>--</span>%</p>
+            </div>
+            <div class="hour hour-1">
+              <p class="time"><span>00:00</span></p>
+              <img class="icon condition-icon" />
+              <p class="temp minor-temp"><span>--</span>℃</p>
+              <p class="rain-chance"><img class="icon rain-chance-icon" /> <span>--</span>%</p>
+            </div>
+            <div class="hour hour-2">
+              <p class="time"><span>01:00</span></p>
+              <img class="icon condition-icon" />
+              <p class="temp minor-temp"><span>--</span>℃</p>
+              <p class="rain-chance"><img class="icon rain-chance-icon" /> <span>--</span>%</p>
+            </div>
+            <div class="hour hour-3">
+              <p class="time"><span>02:00</span></p>
+              <img class="icon condition-icon" />
+              <p class="temp minor-temp"><span>--</span>℃</p>
+              <p class="rain-chance"><img class="icon rain-chance-icon" /> <span>--</span>%</p>
+            </div>
+            <div class="hour hour-4">
+              <p class="time"><span>03:00</span></p>
+              <img class="icon condition-icon" />
+              <p class="temp minor-temp"><span>--</span>℃</p>
+              <p class="rain-chance"><img class="icon rain-chance-icon" /> <span>--</span>%</p>
+            </div>
+            <div class="hour hour-5">
+              <p class="time"><span>04:00</span></p>
+              <img class="icon condition-icon" />
+              <p class="temp minor-temp"><span>--</span>℃</p>
+              <p class="rain-chance"><img class="icon rain-chance-icon" /> <span>--</span>%</p>
+            </div>
+            <div class="hour hour-6">
+              <p class="time"><span>05:00</span></p>
+              <img class="icon condition-icon" />
+              <p class="temp minor-temp"><span>--</span>℃</p>
+              <p class="rain-chance"><img class="icon rain-chance-icon" /> <span>--</span>%</p>
+            </div>
+            <div class="hour hour-7">
+              <p class="time"><span>06:00</span></p>
+              <img class="icon condition-icon" />
+              <p class="temp minor-temp"><span>--</span>℃</p>
+              <p class="rain-chance"><img class="icon rain-chance-icon" /> <span>--</span>%</p>
+            </div>
+            <div class="hour hour-8">
+              <p class="time"><span>07:00</span></p>
+              <img class="icon condition-icon" />
+              <p class="temp minor-temp"><span>--</span>℃</p>
+              <p class="rain-chance"><img class="icon rain-chance-icon" /> <span>--</span>%</p>
+            </div>
+            <div class="hour hour-9">
+              <p class="time"><span>08:00</span></p>
+              <img class="icon condition-icon" />
+              <p class="temp minor-temp"><span>--</span>℃</p>
+              <p class="rain-chance"><img class="icon rain-chance-icon" /> <span>--</span>%</p>
+            </div>
+            <div class="hour hour-10">
+              <p class="time"><span>09:00</span></p>
+              <img class="icon condition-icon" />
+              <p class="temp minor-temp"><span>--</span>℃</p>
+              <p class="rain-chance"><img class="icon rain-chance-icon" /> <span>--</span>%</p>
+            </div>
+            <div class="hour hour-11">
+              <p class="time"><span>10:00</span></p>
+              <img class="icon condition-icon" />
+              <p class="temp minor-temp"><span>--</span>℃</p>
+              <p class="rain-chance"><img class="icon rain-chance-icon" /> <span>--</span>%</p>
+            </div>
+            <div class="hour hour-12">
+              <p class="time"><span>11:00</span></p>
+              <img class="icon condition-icon" />
+              <p class="temp minor-temp"><span>--</span>℃</p>
+              <p class="rain-chance"><img class="icon rain-chance-icon" /> <span>--</span>%</p>
+            </div>
+            <div class="hour hour-13">
+              <p class="time"><span>12:00</span></p>
+              <img class="icon condition-icon" />
+              <p class="temp minor-temp"><span>--</span>℃</p>
+              <p class="rain-chance"><img class="icon rain-chance-icon" /> <span>--</span>%</p>
+            </div>
+            <div class="hour hour-14">
+              <p class="time"><span>13:00</span></p>
+              <img class="icon condition-icon" />
+              <p class="temp minor-temp"><span>--</span>℃</p>
+              <p class="rain-chance"><img class="icon rain-chance-icon" /> <span>--</span>%</p>
+            </div>
+            <div class="hour hour-15">
+              <p class="time"><span>14:00</span></p>
+              <img class="icon condition-icon" />
+              <p class="temp minor-temp"><span>--</span>℃</p>
+              <p class="rain-chance"><img class="icon rain-chance-icon" /> <span>--</span>%</p>
+            </div>
+            <div class="hour hour-16">
+              <p class="time"><span>15:00</span></p>
+              <img class="icon condition-icon" />
+              <p class="temp minor-temp"><span>--</span>℃</p>
+              <p class="rain-chance"><img class="icon rain-chance-icon" /> <span>--</span>%</p>
+            </div>
+            <div class="hour hour-17">
+              <p class="time"><span>16:00</span></p>
+              <img class="icon condition-icon" />
+              <p class="temp minor-temp"><span>--</span>℃</p>
+              <p class="rain-chance"><img class="icon rain-chance-icon" /> <span>--</span>%</p>
+            </div>
+            <div class="hour hour-18">
+              <p class="time"><span>17:00</span></p>
+              <img class="icon condition-icon" />
+              <p class="temp minor-temp"><span>--</span>℃</p>
+              <p class="rain-chance"><img class="icon rain-chance-icon" /> <span>--</span>%</p>
+            </div>
+            <div class="hour hour-19">
+              <p class="time"><span>18:00</span></p>
+              <img class="icon condition-icon" />
+              <p class="temp minor-temp"><span>--</span>℃</p>
+              <p class="rain-chance"><img class="icon rain-chance-icon" /> <span>--</span>%</p>
+            </div>
+            <div class="hour hour-20">
+              <p class="time"><span>19:00</span></p>
+              <img class="icon condition-icon" />
+              <p class="temp minor-temp"><span>--</span>℃</p>
+              <p class="rain-chance"><img class="icon rain-chance-icon" /> <span>--</span>%</p>
+            </div>
+            <div class="hour hour-21">
+              <p class="time"><span>20:00</span></p>
+              <img class="icon condition-icon" />
+              <p class="temp minor-temp"><span>--</span>℃</p>
+              <p class="rain-chance"><img class="icon rain-chance-icon" /> <span>--</span>%</p>
+            </div>
+            <div class="hour hour-22">
+              <p class="time"><span>21:00</span></p>
+              <img class="icon condition-icon" />
+              <p class="temp minor-temp"><span>--</span>℃</p>
+              <p class="rain-chance"><img class="icon rain-chance-icon" /> <span>--</span>%</p>
+            </div>
+            <div class="hour hour-23">
+              <p class="time"><span>22:00</span></p>
+              <img class="icon condition-icon" />
+              <p class="temp minor-temp"><span>--</span>℃</p>
+              <p class="rain-chance"><img class="icon rain-chance-icon" /> <span>--</span>%</p>
+            </div>
+            <div class="hour hour-24">
+              <p class="time"><span>23:00</span></p>
+              <img class="icon condition-icon" />
+              <p class="temp minor-temp"><span>--</span>℃</p>
+              <p class="rain-chance"><img class="icon rain-chance-icon" /> <span>--</span>%</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="daily">
+          <div class="day day-0">
+            <p class="date"><span>Today</span></p>
+            <img class="icon condition-icon" />
+            <p class="temp major-temp"><span>--</span>℃</p>
+            <p class="temp minor-temp">
+              Hi: <span class="temp-hi">--</span>℃ &nbsp;&nbsp; Lo: <span class="temp-lo">--</span>℃
+            </p>
+            <p class="rain-chance"><img class="icon rain-chance-icon" /> <span>--</span>%</p>
+            <p class="humidity">Humidity: <span>--</span>%</p>
+          </div>
+          <div class="day day-1">
+            <p class="date"><span>Sun</span></p>
+            <img class="icon condition-icon" />
+            <p class="temp major-temp"><span>--</span>℃</p>
+            <p class="temp minor-temp">
+              Hi: <span class="temp-hi">--</span>℃ &nbsp;&nbsp; Lo: <span class="temp-lo">--</span>℃
+            </p>
+            <p class="rain-chance"><img class="icon rain-chance-icon" /> <span>--</span>%</p>
+            <p class="humidity">Humidity: <span>--</span>%</p>
+          </div>
+          <div class="day day-2">
+            <p class="date"><span>Mon</span></p>
+            <img class="icon condition-icon" />
+            <p class="temp major-temp"><span>--</span>℃</p>
+            <p class="temp minor-temp">
+              Hi: <span class="temp-hi">--</span>℃ &nbsp;&nbsp; Lo: <span class="temp-lo">--</span>℃
+            </p>
+            <p class="rain-chance"><img class="icon rain-chance-icon" /> <span>--</span>%</p>
+            <p class="humidity">Humidity: <span>--</span>%</p>
+          </div>
+          <div class="day day-3">
+            <p class="date"><span>Tue</span></p>
+            <img class="icon condition-icon" />
+            <p class="temp major-temp"><span>--</span>℃</p>
+            <p class="temp minor-temp">
+              Hi: <span class="temp-hi">--</span>℃ &nbsp;&nbsp; Lo: <span class="temp-lo">--</span>℃
+            </p>
+            <p class="rain-chance"><img class="icon rain-chance-icon" /> <span>--</span>%</p>
+            <p class="humidity">Humidity: <span>--</span>%</p>
+          </div>
+          <div class="day day-4">
+            <p class="date"><span>Wed</span></p>
+            <img class="icon condition-icon" />
+            <p class="temp major-temp"><span>--</span>℃</p>
+            <p class="temp minor-temp">
+              Hi: <span class="temp-hi">--</span>℃ &nbsp;&nbsp; Lo: <span class="temp-lo">--</span>℃
+            </p>
+            <p class="rain-chance"><img class="icon rain-chance-icon" /> <span>--</span>%</p>
+            <p class="humidity">Humidity: <span>--</span>%</p>
+          </div>
+          <div class="day day-5">
+            <p class="date"><span>Thu</span></p>
+            <img class="icon condition-icon" />
+            <p class="temp major-temp"><span>--</span>℃</p>
+            <p class="temp minor-temp">
+              Hi: <span class="temp-hi">--</span>℃ &nbsp;&nbsp; Lo: <span class="temp-lo">--</span>℃
+            </p>
+            <p class="rain-chance"><img class="icon rain-chance-icon" /> <span>--</span>%</p>
+            <p class="humidity">Humidity: <span>--</span>%</p>
+          </div>
+          <div class="day day-6">
+            <p class="date"><span>Fri</span></p>
+            <img class="icon condition-icon" />
+            <p class="temp major-temp"><span>--</span>℃</p>
+            <p class="temp minor-temp">
+              Hi: <span class="temp-hi">--</span>℃ &nbsp;&nbsp; Lo: <span class="temp-lo">--</span>℃
+            </p>
+            <p class="rain-chance"><img class="icon rain-chance-icon" /> <span>--</span>%</p>
+            <p class="humidity">Humidity: <span>--</span>%</p>
+          </div>
+          <div class="day day-7">
+            <p class="date"><span>Sat</span></p>
+            <img class="icon condition-icon" />
+            <p class="temp major-temp"><span>--</span>℃</p>
+            <p class="temp minor-temp">
+              Hi: <span class="temp-hi">--</span>℃ &nbsp;&nbsp; Lo: <span class="temp-lo">--</span>℃
+            </p>
+            <p class="rain-chance"><img class="icon rain-chance-icon" /> <span>--</span>%</p>
+            <p class="humidity">Humidity: <span>--</span>%</p>
+          </div>
+        </div>
+      </main>
     </div>
-  </div>
-</body>
+  </body>
 </html>
