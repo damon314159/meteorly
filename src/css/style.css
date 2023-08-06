@@ -1,6 +1,7 @@
 :root {
   font-size: 16px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
 }
 
 @media only screen and (min-width: 320px) {
