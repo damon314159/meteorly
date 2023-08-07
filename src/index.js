@@ -63,26 +63,20 @@ async function getLocation(data) {
 async function requestWeatherAPI(query = 'auto:ip') {
   const publicKey = '3c7d101d6aad41f39b9163700230208'
   const url = `https://api.weatherapi.com/v1/forecast.json?key=${publicKey}&q=${query}&days=8&aqi=no&alerts=no`
-  const response = await fetch(url, { mode: 'cors' })
-  // try and catch for a no location found error here
-  /// ///////////////////////////////////////////////
-  /// ///////////////////////////////////////////////
-  /// ///////////////////////////////////////////////
-  /// ///////////////////////////////////////////////
-  /// / TODO TODO TODO TODO TODO TODO TODO TODO TODO/
-  /// ///////////////////////////////////////////////
-  /// ///////////////////////////////////////////////
-  /// ///////////////////////////////////////////////
-  /// ///////////////////////////////////////////////
-  /// ///////////////////////////////////////////////
-  /// ///////////////////////////////////////////////
-
-  const weatherData = await response.json()
-  return {
-    location: getLocation(weatherData),
-    overview: forecastOverview(weatherData),
-    day: forecastDay(weatherData),
-    week: forecastWeek(weatherData)
+  try {
+    const response = await fetch(url, { mode: 'cors' })
+    if (response.status !== 200) {
+      throw new Error('No location found')
+    }
+    const weatherData = await response.json()
+    return {
+      location: getLocation(weatherData),
+      overview: forecastOverview(weatherData),
+      day: forecastDay(weatherData),
+      week: forecastWeek(weatherData)
+    }
+  } catch (error) {
+    return error
   }
 }
 

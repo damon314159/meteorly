@@ -56,6 +56,10 @@ export default async function populateUI(conditionDict, requestWeatherAPI, query
 
   const requestObj = await requestWeatherAPI(query)
   Promise.all(Array.from(Object.values(requestObj))).then((values) => {
+    if (values.length !== 4) {
+      alert('No location found')
+      return
+    }
     const [location, overview, day, week] = values
     populateLocation(location)
     populateOverview(overview)
