@@ -1,20 +1,9 @@
 :root {
   font-size: 16px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Ubuntu Mono', 'Courier New', Courier, monospace;
   text-align: center;
 }
 
-@media only screen and (min-width: 320px) {
-  /* Add styles for small devices here */
-}
-
-@media only screen and (min-width: 768px) {
-  /* Add styles for medium devices here */
-}
-
-@media only screen and (min-width: 1024px) {
-  /* Add styles for large devices here */
-}
 body,
 h1,
 h2,
@@ -26,20 +15,28 @@ p {
 
 body {
   background-color: #f5f5f5;
+  min-height: 100vh;
+  height: 1px;
 }
 
 .container {
   margin: 0 auto;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 1440px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
   padding: 1.3rem;
   background-color: #dedede;
+  gap: 1rem;
+  flex: 0 0 auto;
 }
 
 .logo {
@@ -51,15 +48,17 @@ header {
 .logo h2 {
   font-size: 1.5rem;
   font-weight: bold;
-  margin-right: 0.6rem;
+}
+
+.logo-icon {
+  filter: invert(26%) sepia(68%) saturate(3062%) hue-rotate(211deg) brightness(90%) contrast(86%);
 }
 
 .search-bar {
   display: flex;
   align-items: center;
-  border: 0.1rem solid #ccc;
-  border-radius: 0.4rem;
   padding: 0.3rem;
+  gap: 0.5rem;
 }
 
 .search-bar input {
@@ -67,10 +66,17 @@ header {
   outline: none;
   width: 100%;
   padding: 0.3rem;
+  border-radius: 0.3rem;
 }
 
-.main {
+.search-icon {
+  height: 1rem;
+  width: 1rem;
+}
+
+main {
   text-align: center;
+  flex: 1 0 auto;
 }
 
 .icon {
@@ -80,24 +86,45 @@ header {
 
 .overview {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  font-family: 'Rubik', sans-serif;
+  grid-template-columns: 1fr max-content max-content 1fr;
   grid-template-rows: repeat(4, max-content);
   align-items: center;
   justify-items: center;
   padding: 1.3rem;
+  box-sizing: border-box;
+  min-width: 320px;
 }
 
 .location {
-  grid-area: 1/1/2/3;
+  grid-area: 1/2/2/4;
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 0.6rem;
 }
 
 .overview .condition-icon {
-  grid-area: 2/1/5/2;
+  grid-area: 2/2/5/3;
   height: 5rem;
   width: 5rem;
+  justify-self: end;
+}
+
+.overview .major-temp {
+  grid-area: 2/3/3/4;
+}
+
+.overview .minor-temp {
+  grid-area: 3/3/4/4;
+}
+
+.overview .chance-factors {
+  grid-area: 4/3/5/4;
+}
+
+.overview .rain-chance,
+.overview .humidity {
+  display: block;
 }
 
 .temp {
@@ -115,13 +142,18 @@ header {
 
 .rain-chance,
 .humidity {
-  font-size: 0.9rem;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
 }
 
 .rain-chance-icon {
-  display: inline-block;
-  height: 0.9rem;
-  width: 0.9rem;
+  display: inline;
+  height: 1rem;
+  width: 1rem;
+  filter: invert(26%) sepia(68%) saturate(3062%) hue-rotate(211deg) brightness(90%) contrast(86%);
 }
 
 .hourly {
@@ -138,7 +170,10 @@ header {
 
 .hour {
   text-align: center;
+  flex: 0 0 auto;
   min-width: 5rem;
+  width: 20vw;
+  max-width: 8rem;
 }
 
 .daily {
@@ -146,9 +181,12 @@ header {
   flex-direction: column;
   gap: 1rem;
   padding: 1.3rem;
+  min-height: max-content;
+  align-self: stretch;
 }
 
 .day {
+  flex: 1 0 auto;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -167,11 +205,63 @@ header {
 .day .temp {
   font-size: 0.9rem;
   flex: 0 0 auto;
+  min-width: 45px;
 }
 
 .day .humidity,
 .day .minor-temp {
   display: none;
   flex: 0 0 auto;
-  font-size: 0.8rem;
+}
+
+@media only screen and (min-width: 768px) {
+  header {
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  main {
+    display: grid;
+    grid-template: max-content 1fr / max-content 1fr;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .overview {
+    grid-area: 1/1/2/2;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .hourly {
+    grid-area: 1/2/2/3;
+    box-sizing: border-box;
+    max-width: calc(100vw - 320px);
+    background-color: #fff;
+  }
+
+  .daily {
+    grid-area: 2/1/3/3;
+    background-color: #dedede;
+    box-sizing: border-box;
+    min-width: 100%;
+  }
+
+  .daily .humidity {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .overview {
+    min-width: 400px;
+  }
+
+  .hourly {
+    max-width: min(calc(100vw - 400px), 1040px);
+  }
+
+  .daily .minor-temp {
+    display: block;
+  }
 }

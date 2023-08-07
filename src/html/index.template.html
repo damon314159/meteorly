@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../assets/icons/meteorly-logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet" />
     <title>Meteorly</title>
   </head>
   <body>
@@ -10,11 +15,11 @@
       <header>
         <div class="logo">
           <h2>Meteorly</h2>
-          <img class="icon logo-icon" />
+          <img class="icon logo-icon" src="../assets/icons/meteorly-logo.svg" />
         </div>
         <div class="search-bar">
           <input type="search" id="search-input" placeholder="Enter city" />
-          <img class="icon search-icon" />
+          <img class="icon search-icon" src="../assets/icons/search.svg" />
         </div>
       </header>
 
@@ -28,7 +33,7 @@
           <p class="temp minor-temp">
             Hi: <span data-contains="maxTemp">--</span>℃ &nbsp;&nbsp; Lo: <span data-contains="minTemp">--</span>℃
           </p>
-          <div>
+          <div class="chance-factors">
             <p class="rain-chance">Chance of Rain: <span data-contains="rainChance">--</span>%</p>
             <p class="humidity">Humidity: <span data-contains="humidity">--</span>%</p>
           </div>
@@ -41,7 +46,8 @@
               <img class="icon condition-icon" />
               <p class="temp minor-temp"><span data-contains="avgTemp">--</span>℃</p>
               <p class="rain-chance">
-                <img class="icon rain-chance-icon" /> <span data-contains="rainChance">--</span>%
+                <img class="icon rain-chance-icon" src="../assets/icons/rain-chance.svg" />
+                <span data-contains="rainChance">--</span>%
               </p>
             </div>
             <div class="hour hour-1">
@@ -49,7 +55,8 @@
               <img class="icon condition-icon" />
               <p class="temp minor-temp"><span data-contains="avgTemp">--</span>℃</p>
               <p class="rain-chance">
-                <img class="icon rain-chance-icon" /> <span data-contains="rainChance">--</span>%
+                <img class="icon rain-chance-icon" src="../assets/icons/rain-chance.svg" />
+                <span data-contains="rainChance">--</span>%
               </p>
             </div>
             <div class="hour hour-2">
@@ -57,7 +64,8 @@
               <img class="icon condition-icon" />
               <p class="temp minor-temp"><span data-contains="avgTemp">--</span>℃</p>
               <p class="rain-chance">
-                <img class="icon rain-chance-icon" /> <span data-contains="rainChance">--</span>%
+                <img class="icon rain-chance-icon" src="../assets/icons/rain-chance.svg" />
+                <span data-contains="rainChance">--</span>%
               </p>
             </div>
             <div class="hour hour-3">
@@ -65,7 +73,8 @@
               <img class="icon condition-icon" />
               <p class="temp minor-temp"><span data-contains="avgTemp">--</span>℃</p>
               <p class="rain-chance">
-                <img class="icon rain-chance-icon" /> <span data-contains="rainChance">--</span>%
+                <img class="icon rain-chance-icon" src="../assets/icons/rain-chance.svg" />
+                <span data-contains="rainChance">--</span>%
               </p>
             </div>
             <div class="hour hour-4">
@@ -73,7 +82,8 @@
               <img class="icon condition-icon" />
               <p class="temp minor-temp"><span data-contains="avgTemp">--</span>℃</p>
               <p class="rain-chance">
-                <img class="icon rain-chance-icon" /> <span data-contains="rainChance">--</span>%
+                <img class="icon rain-chance-icon" src="../assets/icons/rain-chance.svg" />
+                <span data-contains="rainChance">--</span>%
               </p>
             </div>
             <div class="hour hour-5">
@@ -81,7 +91,8 @@
               <img class="icon condition-icon" />
               <p class="temp minor-temp"><span data-contains="avgTemp">--</span>℃</p>
               <p class="rain-chance">
-                <img class="icon rain-chance-icon" /> <span data-contains="rainChance">--</span>%
+                <img class="icon rain-chance-icon" src="../assets/icons/rain-chance.svg" />
+                <span data-contains="rainChance">--</span>%
               </p>
             </div>
             <div class="hour hour-6">
@@ -89,7 +100,8 @@
               <img class="icon condition-icon" />
               <p class="temp minor-temp"><span data-contains="avgTemp">--</span>℃</p>
               <p class="rain-chance">
-                <img class="icon rain-chance-icon" /> <span data-contains="rainChance">--</span>%
+                <img class="icon rain-chance-icon" src="../assets/icons/rain-chance.svg" />
+                <span data-contains="rainChance">--</span>%
               </p>
             </div>
             <div class="hour hour-7">
@@ -97,7 +109,8 @@
               <img class="icon condition-icon" />
               <p class="temp minor-temp"><span data-contains="avgTemp">--</span>℃</p>
               <p class="rain-chance">
-                <img class="icon rain-chance-icon" /> <span data-contains="rainChance">--</span>%
+                <img class="icon rain-chance-icon" src="../assets/icons/rain-chance.svg" />
+                <span data-contains="rainChance">--</span>%
               </p>
             </div>
             <div class="hour hour-8">
@@ -105,7 +118,8 @@
               <img class="icon condition-icon" />
               <p class="temp minor-temp"><span data-contains="avgTemp">--</span>℃</p>
               <p class="rain-chance">
-                <img class="icon rain-chance-icon" /> <span data-contains="rainChance">--</span>%
+                <img class="icon rain-chance-icon" src="../assets/icons/rain-chance.svg" />
+                <span data-contains="rainChance">--</span>%
               </p>
             </div>
             <div class="hour hour-9">
@@ -113,7 +127,8 @@
               <img class="icon condition-icon" />
               <p class="temp minor-temp"><span data-contains="avgTemp">--</span>℃</p>
               <p class="rain-chance">
-                <img class="icon rain-chance-icon" /> <span data-contains="rainChance">--</span>%
+                <img class="icon rain-chance-icon" src="../assets/icons/rain-chance.svg" />
+                <span data-contains="rainChance">--</span>%
               </p>
             </div>
             <div class="hour hour-10">
@@ -121,7 +136,8 @@
               <img class="icon condition-icon" />
               <p class="temp minor-temp"><span data-contains="avgTemp">--</span>℃</p>
               <p class="rain-chance">
-                <img class="icon rain-chance-icon" /> <span data-contains="rainChance">--</span>%
+                <img class="icon rain-chance-icon" src="../assets/icons/rain-chance.svg" />
+                <span data-contains="rainChance">--</span>%
               </p>
             </div>
             <div class="hour hour-11">
@@ -129,7 +145,8 @@
               <img class="icon condition-icon" />
               <p class="temp minor-temp"><span data-contains="avgTemp">--</span>℃</p>
               <p class="rain-chance">
-                <img class="icon rain-chance-icon" /> <span data-contains="rainChance">--</span>%
+                <img class="icon rain-chance-icon" src="../assets/icons/rain-chance.svg" />
+                <span data-contains="rainChance">--</span>%
               </p>
             </div>
             <div class="hour hour-12">
@@ -137,7 +154,8 @@
               <img class="icon condition-icon" />
               <p class="temp minor-temp"><span data-contains="avgTemp">--</span>℃</p>
               <p class="rain-chance">
-                <img class="icon rain-chance-icon" /> <span data-contains="rainChance">--</span>%
+                <img class="icon rain-chance-icon" src="../assets/icons/rain-chance.svg" />
+                <span data-contains="rainChance">--</span>%
               </p>
             </div>
             <div class="hour hour-13">
@@ -145,7 +163,8 @@
               <img class="icon condition-icon" />
               <p class="temp minor-temp"><span data-contains="avgTemp">--</span>℃</p>
               <p class="rain-chance">
-                <img class="icon rain-chance-icon" /> <span data-contains="rainChance">--</span>%
+                <img class="icon rain-chance-icon" src="../assets/icons/rain-chance.svg" />
+                <span data-contains="rainChance">--</span>%
               </p>
             </div>
             <div class="hour hour-14">
@@ -153,7 +172,8 @@
               <img class="icon condition-icon" />
               <p class="temp minor-temp"><span data-contains="avgTemp">--</span>℃</p>
               <p class="rain-chance">
-                <img class="icon rain-chance-icon" /> <span data-contains="rainChance">--</span>%
+                <img class="icon rain-chance-icon" src="../assets/icons/rain-chance.svg" />
+                <span data-contains="rainChance">--</span>%
               </p>
             </div>
             <div class="hour hour-15">
@@ -161,7 +181,8 @@
               <img class="icon condition-icon" />
               <p class="temp minor-temp"><span data-contains="avgTemp">--</span>℃</p>
               <p class="rain-chance">
-                <img class="icon rain-chance-icon" /> <span data-contains="rainChance">--</span>%
+                <img class="icon rain-chance-icon" src="../assets/icons/rain-chance.svg" />
+                <span data-contains="rainChance">--</span>%
               </p>
             </div>
             <div class="hour hour-16">
@@ -169,7 +190,8 @@
               <img class="icon condition-icon" />
               <p class="temp minor-temp"><span data-contains="avgTemp">--</span>℃</p>
               <p class="rain-chance">
-                <img class="icon rain-chance-icon" /> <span data-contains="rainChance">--</span>%
+                <img class="icon rain-chance-icon" src="../assets/icons/rain-chance.svg" />
+                <span data-contains="rainChance">--</span>%
               </p>
             </div>
             <div class="hour hour-17">
@@ -177,7 +199,8 @@
               <img class="icon condition-icon" />
               <p class="temp minor-temp"><span data-contains="avgTemp">--</span>℃</p>
               <p class="rain-chance">
-                <img class="icon rain-chance-icon" /> <span data-contains="rainChance">--</span>%
+                <img class="icon rain-chance-icon" src="../assets/icons/rain-chance.svg" />
+                <span data-contains="rainChance">--</span>%
               </p>
             </div>
             <div class="hour hour-18">
@@ -185,7 +208,8 @@
               <img class="icon condition-icon" />
               <p class="temp minor-temp"><span data-contains="avgTemp">--</span>℃</p>
               <p class="rain-chance">
-                <img class="icon rain-chance-icon" /> <span data-contains="rainChance">--</span>%
+                <img class="icon rain-chance-icon" src="../assets/icons/rain-chance.svg" />
+                <span data-contains="rainChance">--</span>%
               </p>
             </div>
             <div class="hour hour-19">
@@ -193,7 +217,8 @@
               <img class="icon condition-icon" />
               <p class="temp minor-temp"><span data-contains="avgTemp">--</span>℃</p>
               <p class="rain-chance">
-                <img class="icon rain-chance-icon" /> <span data-contains="rainChance">--</span>%
+                <img class="icon rain-chance-icon" src="../assets/icons/rain-chance.svg" />
+                <span data-contains="rainChance">--</span>%
               </p>
             </div>
             <div class="hour hour-20">
@@ -201,7 +226,8 @@
               <img class="icon condition-icon" />
               <p class="temp minor-temp"><span data-contains="avgTemp">--</span>℃</p>
               <p class="rain-chance">
-                <img class="icon rain-chance-icon" /> <span data-contains="rainChance">--</span>%
+                <img class="icon rain-chance-icon" src="../assets/icons/rain-chance.svg" />
+                <span data-contains="rainChance">--</span>%
               </p>
             </div>
             <div class="hour hour-21">
@@ -209,7 +235,8 @@
               <img class="icon condition-icon" />
               <p class="temp minor-temp"><span data-contains="avgTemp">--</span>℃</p>
               <p class="rain-chance">
-                <img class="icon rain-chance-icon" /> <span data-contains="rainChance">--</span>%
+                <img class="icon rain-chance-icon" src="../assets/icons/rain-chance.svg" />
+                <span data-contains="rainChance">--</span>%
               </p>
             </div>
             <div class="hour hour-22">
@@ -217,7 +244,8 @@
               <img class="icon condition-icon" />
               <p class="temp minor-temp"><span data-contains="avgTemp">--</span>℃</p>
               <p class="rain-chance">
-                <img class="icon rain-chance-icon" /> <span data-contains="rainChance">--</span>%
+                <img class="icon rain-chance-icon" src="../assets/icons/rain-chance.svg" />
+                <span data-contains="rainChance">--</span>%
               </p>
             </div>
             <div class="hour hour-23">
@@ -225,7 +253,8 @@
               <img class="icon condition-icon" />
               <p class="temp minor-temp"><span data-contains="avgTemp">--</span>℃</p>
               <p class="rain-chance">
-                <img class="icon rain-chance-icon" /> <span data-contains="rainChance">--</span>%
+                <img class="icon rain-chance-icon" src="../assets/icons/rain-chance.svg" />
+                <span data-contains="rainChance">--</span>%
               </p>
             </div>
             <div class="hour hour-24">
@@ -233,7 +262,8 @@
               <img class="icon condition-icon" />
               <p class="temp minor-temp"><span data-contains="avgTemp">--</span>℃</p>
               <p class="rain-chance">
-                <img class="icon rain-chance-icon" /> <span data-contains="rainChance">--</span>%
+                <img class="icon rain-chance-icon" src="../assets/icons/rain-chance.svg" />
+                <span data-contains="rainChance">--</span>%
               </p>
             </div>
           </div>
@@ -247,7 +277,10 @@
             <p class="temp minor-temp">
               Hi: <span data-contains="maxTemp">--</span>℃ &nbsp;&nbsp; Lo: <span data-contains="minTemp">--</span>℃
             </p>
-            <p class="rain-chance"><img class="icon rain-chance-icon" /> <span data-contains="rainChance">--</span>%</p>
+            <p class="rain-chance">
+              <img class="icon rain-chance-icon" src="../assets/icons/rain-chance.svg" />
+              <span data-contains="rainChance">--</span>%
+            </p>
             <p class="humidity">Humidity: <span data-contains="humidity">--</span>%</p>
           </div>
           <div class="day day-2">
@@ -257,7 +290,10 @@
             <p class="temp minor-temp">
               Hi: <span data-contains="maxTemp">--</span>℃ &nbsp;&nbsp; Lo: <span data-contains="minTemp">--</span>℃
             </p>
-            <p class="rain-chance"><img class="icon rain-chance-icon" /> <span data-contains="rainChance">--</span>%</p>
+            <p class="rain-chance">
+              <img class="icon rain-chance-icon" src="../assets/icons/rain-chance.svg" />
+              <span data-contains="rainChance">--</span>%
+            </p>
             <p class="humidity">Humidity: <span data-contains="humidity">--</span>%</p>
           </div>
           <div class="day day-3">
@@ -267,7 +303,10 @@
             <p class="temp minor-temp">
               Hi: <span data-contains="maxTemp">--</span>℃ &nbsp;&nbsp; Lo: <span data-contains="minTemp">--</span>℃
             </p>
-            <p class="rain-chance"><img class="icon rain-chance-icon" /> <span data-contains="rainChance">--</span>%</p>
+            <p class="rain-chance">
+              <img class="icon rain-chance-icon" src="../assets/icons/rain-chance.svg" />
+              <span data-contains="rainChance">--</span>%
+            </p>
             <p class="humidity">Humidity: <span data-contains="humidity">--</span>%</p>
           </div>
           <div class="day day-4">
@@ -277,7 +316,10 @@
             <p class="temp minor-temp">
               Hi: <span data-contains="maxTemp">--</span>℃ &nbsp;&nbsp; Lo: <span data-contains="minTemp">--</span>℃
             </p>
-            <p class="rain-chance"><img class="icon rain-chance-icon" /> <span data-contains="rainChance">--</span>%</p>
+            <p class="rain-chance">
+              <img class="icon rain-chance-icon" src="../assets/icons/rain-chance.svg" />
+              <span data-contains="rainChance">--</span>%
+            </p>
             <p class="humidity">Humidity: <span data-contains="humidity">--</span>%</p>
           </div>
           <div class="day day-5">
@@ -287,7 +329,10 @@
             <p class="temp minor-temp">
               Hi: <span data-contains="maxTemp">--</span>℃ &nbsp;&nbsp; Lo: <span data-contains="minTemp">--</span>℃
             </p>
-            <p class="rain-chance"><img class="icon rain-chance-icon" /> <span data-contains="rainChance">--</span>%</p>
+            <p class="rain-chance">
+              <img class="icon rain-chance-icon" src="../assets/icons/rain-chance.svg" />
+              <span data-contains="rainChance">--</span>%
+            </p>
             <p class="humidity">Humidity: <span data-contains="humidity">--</span>%</p>
           </div>
           <div class="day day-6">
@@ -297,7 +342,10 @@
             <p class="temp minor-temp">
               Hi: <span data-contains="maxTemp">--</span>℃ &nbsp;&nbsp; Lo: <span data-contains="minTemp">--</span>℃
             </p>
-            <p class="rain-chance"><img class="icon rain-chance-icon" /> <span data-contains="rainChance">--</span>%</p>
+            <p class="rain-chance">
+              <img class="icon rain-chance-icon" src="../assets/icons/rain-chance.svg" />
+              <span data-contains="rainChance">--</span>%
+            </p>
             <p class="humidity">Humidity: <span data-contains="humidity">--</span>%</p>
           </div>
           <div class="day day-7">
@@ -307,7 +355,10 @@
             <p class="temp minor-temp">
               Hi: <span data-contains="maxTemp">--</span>℃ &nbsp;&nbsp; Lo: <span data-contains="minTemp">--</span>℃
             </p>
-            <p class="rain-chance"><img class="icon rain-chance-icon" /> <span data-contains="rainChance">--</span>%</p>
+            <p class="rain-chance">
+              <img class="icon rain-chance-icon" src="../assets/icons/rain-chance.svg" />
+              <span data-contains="rainChance">--</span>%
+            </p>
             <p class="humidity">Humidity: <span data-contains="humidity">--</span>%</p>
           </div>
         </div>
