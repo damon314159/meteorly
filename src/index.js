@@ -1,4 +1,6 @@
 import { format } from 'date-fns'
+import conditionDict from './assets/json/weather_conditions.json'
+import populateUI from './js/populateUI.module'
 
 require('./css/style.css')
 
@@ -84,59 +86,20 @@ async function requestWeatherAPI(query = 'auto:ip') {
   }
 }
 
-async function populateUI(query) {
-  function fillSpans(nodes, data) {
-    nodes.forEach((node) => {
-      const el = node
-      if (data[el.dataset.contains] !== undefined) {
-        el.textContent = data[el.dataset.contains]
-      }
-    })
-  }
+window.onload = () => {
+  populateUI(conditionDict, requestWeatherAPI)
 
-  function populateLocation(data) {
-    const locationSpan = document.querySelector('.location span')
-    if (data.region) {
-      locationSpan.textContent = `${data.city}, ${data.region}`
-    } else {
-      locationSpan.textContent = `${data.city}, ${data.country}`
+  const searchInput = document.getElementById('search-input')
+  const searchButton = document.querySelector('.search-icon')
+  function performSearch() {
+    const query = searchInput.value
+    populateUI(conditionDict, requestWeatherAPI, query)
+    searchInput.value = ''
+  }
+  searchButton.addEventListener('click', performSearch)
+  searchInput.addEventListener('keypress', (event) => {
+    if (event.code === 'Enter') {
+      performSearch()
     }
-  }
-
-  function populateOverview(data) {
-    const overview = document.querySelector('.overview')
-    const spans = overview.querySelectorAll('span')
-    fillSpans(spans, data)
-
-    // still to add - condition: data.today.condition
-  }
-
-  function populateDay(data) {
-    const hours = document.querySelectorAll('.hour')
-    for (let i = 0; i < data.length; i += 1) {
-      const spans = hours[i].querySelectorAll('span')
-      fillSpans(spans, data[i])
-      // still to add - condition: data.today.condition
-    }
-  }
-
-  function populateWeek(data) {
-    const days = document.querySelectorAll('.day')
-    for (let i = 0; i < data.length; i += 1) {
-      const spans = days[i].querySelectorAll('span')
-      fillSpans(spans, data[i])
-      // still to add - condition: data.today.condition
-    }
-  }
-
-  const requestObj = await requestWeatherAPI(query)
-  Promise.all(Array.from(Object.values(requestObj))).then((values) => {
-    const [location, overview, day, week] = values
-    populateLocation(location)
-    populateOverview(overview)
-    populateDay(day)
-    populateWeek(week)
   })
 }
-
-window.onload = () => populateUI()
