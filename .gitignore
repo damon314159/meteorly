@@ -1,7 +1,5 @@
 node_modules/
-dist/
 .prettierrc.js
 .eslintrc.json
 .prettierignore
 .vscode/
-.gitignore
