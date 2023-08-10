@@ -1,9 +1,11 @@
+/* Global styling variables */
 :root {
   font-size: 16px;
   font-family: 'Ubuntu Mono', 'Courier New', Courier, monospace;
   text-align: center;
 }
 
+/* Reset margins and paddings */
 body,
 h1,
 h2,
@@ -13,12 +15,14 @@ p {
   padding: 0;
 }
 
+/* Body styling */
 body {
   background-color: #f5f5f5;
   min-height: 100vh;
   height: 1px;
 }
 
+/* Container styling for the entire content */
 .container {
   margin: 0 auto;
   background-color: #fff;
@@ -29,6 +33,7 @@ body {
   flex-direction: column;
 }
 
+/* Styling for the header section */
 header {
   display: flex;
   justify-content: start;
@@ -39,6 +44,7 @@ header {
   flex: 0 0 auto;
 }
 
+/* Styling for the logo section */
 .logo {
   display: flex;
   flex-direction: column-reverse;
@@ -50,10 +56,12 @@ header {
   font-weight: bold;
 }
 
+/* Styling for blue filter over svg - programmatically generated */
 .logo-icon {
   filter: invert(26%) sepia(68%) saturate(3062%) hue-rotate(211deg) brightness(90%) contrast(86%);
 }
 
+/* Styling for the search bar section */
 .search-bar {
   display: flex;
   align-items: center;
@@ -74,16 +82,19 @@ header {
   width: 1rem;
 }
 
+/* Main content styling */
 main {
   text-align: center;
   flex: 1 0 auto;
 }
 
+/* Styling for icons */
 .icon {
   width: 2.5rem;
   height: 2.5rem;
 }
 
+/* Styling for the overview section */
 .overview {
   display: grid;
   font-family: 'Rubik', sans-serif;
@@ -96,6 +107,7 @@ main {
   min-width: 320px;
 }
 
+/* Styling for location display */
 .location {
   grid-area: 1/2/2/4;
   font-size: 1.5rem;
@@ -122,24 +134,13 @@ main {
   grid-area: 4/3/5/4;
 }
 
-.overview .rain-chance,
-.overview .humidity {
-  display: block;
-}
-
+/* Styling for temperature values */
 .temp {
   font-weight: bold;
   margin: 0.3rem 0;
 }
 
-.major-temp {
-  font-size: 2.3rem;
-}
-
-.minor-temp {
-  font-size: 1rem;
-}
-
+/* Styling for rain chance and humidity */
 .rain-chance,
 .humidity {
   font-size: 1rem;
@@ -156,11 +157,13 @@ main {
   filter: invert(26%) sepia(68%) saturate(3062%) hue-rotate(211deg) brightness(90%) contrast(86%);
 }
 
+/* Styling for hourly forecast section */
 .hourly {
   padding: 1.3rem;
   background-color: #dedede;
 }
 
+/* Styling for scrolling container in hourly section */
 .hourly .scroll-container {
   display: flex;
   gap: 0.5rem;
@@ -168,6 +171,7 @@ main {
   padding: 1.5rem 0;
 }
 
+/* Styling for each hourly forecast item */
 .hour {
   text-align: center;
   flex: 0 0 auto;
@@ -176,6 +180,7 @@ main {
   max-width: 8rem;
 }
 
+/* Styling for daily forecast section */
 .daily {
   display: flex;
   flex-direction: column;
@@ -185,6 +190,7 @@ main {
   align-self: stretch;
 }
 
+/* Styling for each daily forecast item */
 .day {
   flex: 1 0 auto;
   display: flex;
@@ -214,6 +220,7 @@ main {
   flex: 0 0 auto;
 }
 
+/* Media query for screen width >= 768px */
 @media only screen and (min-width: 768px) {
   header {
     justify-content: center;
@@ -252,6 +259,7 @@ main {
   }
 }
 
+/* Media query for screen width >= 1024px */
 @media only screen and (min-width: 1024px) {
   .overview {
     min-width: 400px;

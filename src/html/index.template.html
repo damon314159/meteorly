@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="../assets/icons/meteorly-logo.svg" />
+    <!-- Link to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet" />
@@ -13,6 +14,7 @@
   <body>
     <div class="container">
       <header>
+        <!-- Logo and search bar -->
         <div class="logo">
           <h2>Meteorly</h2>
           <img class="icon logo-icon" src="../assets/icons/meteorly-logo.svg" />
@@ -25,6 +27,7 @@
 
       <main>
         <div class="overview">
+          <!-- Weather overview -->
           <h2 class="location">
             <span data-contains="location">City, Country</span>
           </h2>
@@ -40,6 +43,10 @@
         </div>
 
         <div class="hourly">
+          <!-- Hourly weather forecast -->
+          <!-- Repeated hourly blocks with different times -->
+          <!-- ... (hour-0 to hour-24) ... -->
+
           <div class="scroll-container">
             <div class="hour hour-0">
               <p class="time"><span data-contains="time">Now</span></p>
@@ -270,6 +277,10 @@
         </div>
 
         <div class="daily">
+          <!-- Daily weather forecast -->
+          <!-- Repeated daily blocks for each day -->
+          <!-- ... (day-1 to day-7) ... -->
+
           <div class="day day-1">
             <p class="date"><span data-contains="date">Sun</span></p>
             <img class="icon condition-icon" />
